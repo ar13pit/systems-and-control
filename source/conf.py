@@ -56,8 +56,8 @@ source_suffix = '.rst'
 master_doc = 'index'
 
 # General information about the project.
-project = u'Systems and Control'
-copyright = u'2018, Arpit Aggarwal'
+project = u'Signals, Systems & Control'
+copyright = u'2018, Arpit Aggarwal | Eindhoven University of Technology'
 author = u'Arpit Aggarwal'
 
 # The version info for the project you're documenting, acts as replacement for
@@ -95,11 +95,24 @@ todo_include_todos = True
 #
 html_theme = 'alabaster'
 
+# Show or hide source .rst files in the HTML output
+#
+html_show_sourcelink = False
+
 # Theme options are theme-specific and customize the look and feel of a theme
 # further.  For a list of options available for each theme, see the
 # documentation.
 #
-# html_theme_options = {}
+html_theme_options = {
+    'logo':'025-robot1.png',
+    'logo_name':True,
+    'description':'Series of Web Books on Comprehensive Theory of Signals, Systems and Control with Applied Mathematics',
+    'page_width':'90%',
+    'show_powered_by':False,
+    'sidebar_width':'20%',
+    'sidebar_collapse':True,
+    # 'logo_text_align':'center',
+}
 
 # Add any paths that contain custom static files (such as style sheets) here,
 # relative to this directory. They are copied after the builtin static files,
@@ -113,8 +126,11 @@ html_static_path = ['_static']
 # refs: http://alabaster.readthedocs.io/en/latest/installation.html#sidebars
 html_sidebars = {
     '**': [
+        'about.html',
+        'navigation.html',
         'relations.html',  # needs 'show_related': True theme option to display
         'searchbox.html',
+
     ]
 }
 
